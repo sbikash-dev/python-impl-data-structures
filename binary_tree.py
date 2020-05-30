@@ -1,29 +1,31 @@
-''' BINARY TREE (GENERIC IMPLEMENTATION)
-        NODE <Key>
-            Each node has a key, reference to left and right child nodes.
+''' GENERIC BINARY TREE IMPLEMENTATION
 
         BINARY TREE <NODE>
             ROOT 
                 Stores the reference to the root Node.
             
             INSERT <Key>
-                Step 1. If left is empty insert as left child.
-                Step 2. Else If right is empty insert as right child.
-                Step 3. Else randomly select a child and repeat steps 1, 2 & 3.
+                If left is empty inserts as left child.
+                Else If right is empty inserts as right child.
+                Else randomly selects a child and repeat.
             
             SEARCH <Data>
-                Use level order to traverse the tree,
-                Returns the first node with the <Data> as the Key.
+                Uses level order to traverse the tree,
+                Returns the first node where <Data> matches the Key.
             
             REMOVE <Key>
+                Searches the node to be removed. 
+                If node to be removed has both left and right child, 
+                    then REMOVE(leftmost child) 
+                    and replaces at node's position. 
+                Else links parent and child (if exists).
             
-            
-            TRAVERSE <Method>
-                Traverse the tree using the method passes,
+            TRAVERSE <MethodName>
+                Traverses the tree using the <MethodName> passed,
                 Prints the output in a 1D Array.
             
-            PREETYPRINT <>
-                Prints the tree in user friendly way.
+            PREETYPRINT
+                Prints in 2D tree format.
 '''
 
 import random
@@ -196,9 +198,9 @@ class BinaryTree:
                 if node.left: queue.append(node.left)
                 if node.right: queue.append(node.right)
         
-    def spiralOrder(self): pass
+    def spiralOrder(self, node): pass
     
-    def verticalOrder(self): pass
+    def verticalOrder(self, node): pass
     
     def __inOrderReverse(self, node):
         if node:
@@ -206,7 +208,7 @@ class BinaryTree:
             print(node.key, end=', ')
             self.__inOrderReverse(node.left)
         
-    def levelOrderReverse(self): pass
+    def levelOrderReverse(self, node): pass
     
     def __printHelper(self, node, indent, isleftChild):
         if node:
