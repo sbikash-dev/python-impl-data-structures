@@ -70,7 +70,10 @@ def minHeapifyDelete(arr):
      
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     
+=======
+>>>>>>> c9dffcb4b59c9a63ec3064bc97b4c283d7845984
     # Sample Input Cases
     arr1 = [0,1,2,3,4,5,6,7,8,9]
     arr2 = [9,8,7,6,5,4,3,2,1,0]
@@ -95,6 +98,10 @@ if __name__ == '__main__':
     print('Min Heap Insert :',arr)
     
     minimun = minHeapifyDelete(arr)
+<<<<<<< HEAD
     print('Minimum Deleted :', minimun)
+=======
+    print('minimum deleted :', minimun)
+>>>>>>> c9dffcb4b59c9a63ec3064bc97b4c283d7845984
     print('Min Heap Delete :', arr)
     
